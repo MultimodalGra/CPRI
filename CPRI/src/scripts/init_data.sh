@@ -1,0 +1,1 @@
+python src/init_data.py --config-name=cpri_config data_para.dataset_name=food101

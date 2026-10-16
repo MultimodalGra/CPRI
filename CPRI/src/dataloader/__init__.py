@@ -1,0 +1,3 @@
+from .cpri_food101_dataset import Food101Dataset
+from .cpri_hatememes_dataset import HatememesDataset
+from .cpri_mmimdb_dataset import MMIMDbDataset

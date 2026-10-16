@@ -1,0 +1,34 @@
+model_para:
+ model_name: "cpri"
+ backbone: "vilt"
+ vilt_weights: "vilt-b32-mlm"
+ prompt_pos: 1
+ prompt_len: 6
+ dropout_rate: 0.2
+
+
+data_para:
+ dataset_name: "food101"
+ missing_type: "both"
+ missing_rate: 0.7
+ max_text_len: 128
+ max_image_len: 145
+ k: 5
+
+
+optim_para:
+ name: "AdamW"
+ lr: 1e-3
+ weight_decay: 2e-2
+ use_warmup: True
+ warmup_rate: 0.1
+
+
+device: "cuda:0"
+seed: 2024
+epochs: 20
+batch_size: 64
+num_workers: 16
+patience: 20
+save_path: "checkpoints"
+regenerate_missing_table: True
